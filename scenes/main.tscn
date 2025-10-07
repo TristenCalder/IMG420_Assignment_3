@@ -1,0 +1,29 @@
+[gd_scene load_steps=9 format=3 uid="uid://bfvb16hgsongw"]
+
+[ext_resource type="Script" uid="uid://dhwpy00w20igv" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dyuw2784qr346" path="res://scenes/bird.tscn" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://bat6rkm0w2241" path="res://scenes/PauseMenu.tscn" id="2_tefeu"]
+[ext_resource type="Script" uid="uid://ct68qlce51yvo" path="res://scripts/PipeSpawner.gd" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://bns3swhrgxe33" path="res://scenes/ShieldPickup.tscn" id="5_tipki"]
+[ext_resource type="PackedScene" uid="uid://brkr7plo1pgvd" path="res://scenes/FlockManager.tscn" id="6_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://uairjtq2sauv" path="res://scenes/Boid.tscn" id="7_tipki"]
+[ext_resource type="PackedScene" uid="uid://cysc2k2pc2boc" path="res://scenes/Background.tscn" id="9_85g3d"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_o5qli")
+
+[node name="Background" parent="." instance=ExtResource("9_85g3d")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_tefeu")]
+
+[node name="PipeSpawner" type="Node2D" parent="."]
+script = ExtResource("5_tbgi4")
+shield_scene = ExtResource("5_tipki")
+
+[node name="Bird" parent="." instance=ExtResource("2_jyhfs")]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="FlockManager" parent="." instance=ExtResource("6_o6xl0")]
+BoidScene = ExtResource("7_tipki")
+BirdPath = NodePath("../Bird")

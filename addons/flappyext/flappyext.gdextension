@@ -1,0 +1,8 @@
+[configuration]
+entry_symbol = "example_library_init"
+compatibility_minimum = "4.1"
+reloadable = false
+
+[libraries]
+macos.debug = "res://addons/flappyext/libgdexample.macos.template_debug.framework"
+macos.release = "res://addons/flappyext/libgdexample.macos.template_release.framework"

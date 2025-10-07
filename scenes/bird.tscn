@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyuw2784qr346"]
+
+[ext_resource type="Script" uid="uid://dudacy01r6etf" path="res://scripts/Bird.gd" id="1_3po83"]
+[ext_resource type="Texture2D" uid="uid://fl3orihp23y7" path="res://assets/gfx/Bird/redbird-midflap.png" id="1_kqhkv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hq4t0"]
+
+[node name="Bird" type="CharacterBody2D"]
+collision_mask = 3
+script = ExtResource("1_3po83")
+
+[node name="GDBirdSprite" type="FlappySprite" parent="."]
+position = Vector2(0, 8.802194)
+rotation = -0.1865178
+texture = ExtResource("1_kqhkv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hq4t0")
