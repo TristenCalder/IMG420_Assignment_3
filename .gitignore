@@ -10,3 +10,11 @@ obj/
 # OS junk
 .DS_Store
 Thumbs.db
+.import/
+.godot/
+bin/
+obj/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
